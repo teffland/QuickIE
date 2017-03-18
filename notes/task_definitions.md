@@ -41,19 +41,21 @@ Here is an example set of questions a domain expert may have about a document co
 
 These are obviously far too high level for a program to answer with any real accuracy. 
 They involve classification of subqueries over entire document collections.
-So as IE task creators, we break them down into constituent subqueries recursively until we can reach something that is manageable for an algorithm to understand. 
+So as IE task creators, we break them down into constituent subqueries recursively until we can reach something that is manageable for an algorithm (the pipeline we have in mind) to understand. 
 We then answer these high level queries through bottom-up logical composition and aggregation (aka reasoning or queries) of atomic factual units.
 If we break the notion of "atomic factual units" down enough, we get entity and relation extraction.
 This is not surprising. Just as people do, we can compose factual assertions about sets of a few basic objects in the world 
 and how they interact with/operate on eachother to answer virtually infinitely varying questions of increasing complexity.
 (As people, we then "chunk" the answers to subqueries so that we can answer even higher level questions later on with less mental effort. We memoize...)
 
+Putting it as annoyingly simply as possible: Language is compositional.
+
 So why this rant?
 
 This means IE tasks at the end of the day are logical composition of entities and their interactions. 
-Here, it becomes very useful to blend all of the semantic distinctions of the first list.
+Here, for the purpose of defining IE tasks, it becomes very useful to blend all of the semantic distinctions of the first list.
 I use entities to refer to any type "object" that is being communicated through language. These "objects" can have any granularity. 
-They could be a single atom, a body part, a person, a group of people, etc.
+They could be a single atom, a cell, a body part, a person, a group of people, etc.
 In IE, we call these interactions between real world objects "relations." 
 Under the typical formalism of IE, relations are functions of arity 2 (they take two arguments.)
 But I see this as an narrow definition.
