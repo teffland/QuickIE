@@ -65,11 +65,11 @@ It is easy to see why this must be necessary once you begin to talk about events
 Viewing events as interactions (i.e., higher-arity functions) immediately is troubled by their non-compact representation.
 Since mathematically functions do not have optional arguments (changing arguments necessarily makes it a different function,)
 we need to represent every possible combination of arguments for an interaction separately. This is exponential/non-compact and thus not useful.
-But if we instead view events as abstract objects (Neo-Davidsonian reification,) we now have a compact representation. 
+But if we instead view events as abstract objects (Neo-Davidsonian reification,) we now have a compact (albeit tree-factored) representation. 
 The event interacts with each of its arguments through a separate arity-2 relation.
 However if these relations can have additional arguments, we must again recursively define them as events to remain compact.
 
-My point is that relations and events, henceforth refered to as "interactions" are themselves a subset of objects, such that they have a domain and range. Domain and range are objects themselves (but they are base cases -- primitive objects.)
+My point is that relations and events, henceforth refered to as "interactions" are themselves a subset of objects/entities, such that they have a domain and range. Domain and range are objects themselves (but they are base cases -- primitive objects.)
 
 All properties of objects now begin to look like objects themselves; their domain and range are sets of objects defined by some common set of shared properties (as is the case in math when we define sets -- things are in the set conditional on them satisfying certain properties.)
 
