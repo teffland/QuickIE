@@ -1,5 +1,5 @@
 # QuickIE
-Framework for building information extraction systems faster, from ground-zero or above.
+Framework for building information extraction systems faster, from ground-zero up.
 
 ## Goals and Description
 
@@ -9,6 +9,12 @@ Information Extraction -- systems that build knowledge bases by extracting struc
 2. Collecting training data for the task definitions.  This typically is done via some hybrid of distant supervision, labeling heuristics,  and expert and crowdsourced manual annotation of structures. <!--Cite Old Jurafsky and Ng, Weld, Deepdive and Snorkel, Crowdtruth, Culotta, CASTLE, ... -->
 3. Building an accurate, sophisticated extraction pipeline that can leverage the labeled and unlabeled corpora to automatically produce extractions (ie, predicted annotations) which correspond to task definitions, without the need for extensive feature and architecture engineering.
 
+Ultimately, the goal of QuickIE is to address all three of these challenges in a holistic view of end-to-end IE-assisted document collection exploration.
+
+Currently QuickIE is targeting problem (2).
+
+
+<!--
 QuickIE aims to address (1) and (2) by uniting this process under a hybrid formalism:
 
  (1) lambda calculus over implicitly defined knowledge graph schemas - define what questions the KB should be able to answer (queries) and how to answer them (logical compositional statements/algorithms over KG queries)
@@ -42,8 +48,8 @@ All higher order relations contain the result of at least one actualized subquer
             and Ate(e2), Restaurant(r), Food(f), Arg-Object(e2, p), Arg-Place(e2, r), Arg-Item(e2, f) // and they ate food at restaurant
             and Arg-Eat(e1, e2) // and the eating event is associated with this sick event 
       - Person(p) := Is there a Person in this freetext?
-      - GotSick(e1) := Did a Person get sick? --> GotSick conditional on "Person" present
-      - Ate(e2) := Did a Person eat? --> Ate conditional on "Person" present
+      - GotSick(e1) := Did a Person get sick? -> GotSick conditional on "Person" present
+      - Ate(e2) := Did a Person eat? -> Ate conditional on "Person" present
       - Restaurant(r) := Is there a Restaurant mentioned?
       - Food(f) := Is there a food item mentioned?
       - 
@@ -58,4 +64,4 @@ All higher order relations contain the result of at least one actualized subquer
 
 * This borders on the idea of "deductive database systems", however we are building the DB from the ground (or above) up semi-automatically.  We are also allowing for "inductive" inferences via the use of models
 * In the future, we should wrap up the whole thing in an HL-MRF to get or some meta-SRL model to provide for noisy integration
-            
+-->
