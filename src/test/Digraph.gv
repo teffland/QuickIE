@@ -1,0 +1,65 @@
+// Microtask Pipeline
+digraph {
+	Ate [label=Ate]
+		Person -> Ate
+	multiple [label=multiple]
+		Person -> multiple
+	Restaurant [label=Restaurant]
+	Food [label=Food]
+		Ate -> Food
+	type [label=type]
+		Time -> type
+	object [label=object]
+	object_and_0 [label=AND]
+		Ate -> object_and_0
+		Food -> object_and_0
+		object_and_0 -> object
+	when [label=when]
+	when_and_0 [label=AND]
+		Ate -> when_and_0
+		Time -> when_and_0
+		when_and_0 -> when
+	Person [label=Person]
+	tense [label=tense]
+		Sick -> tense
+	Location [label=Location]
+	Sick [label=Sick]
+		Person -> Sick
+	Time [label=Time]
+	at [label=at]
+	at_and_0 [label=AND]
+		Restaurant -> at_and_0
+		Location -> at_and_0
+		at_and_0 -> at
+	from [label=from]
+	from_and_0 [label=AND]
+		Sick -> from_and_0
+		Ate -> from_and_0
+		from_and_0 -> from
+	realis [label=realis]
+		Sick -> realis
+	where [label=where]
+	where_and_0 [label=AND]
+		Ate -> where_and_0
+		Restaurant -> where_and_0
+		where_and_0 -> where
+	where_and_1 [label=AND]
+		Ate -> where_and_1
+		Location -> where_and_1
+		where_and_1 -> where
+	exhibited [label=exhibited]
+	exhibited_and_0 [label=AND]
+		Person -> exhibited_and_0
+		Symptom -> exhibited_and_0
+		exhibited_and_0 -> exhibited
+	Symptom [label=Symptom]
+	subject [label=subject]
+	subject_and_0 [label=AND]
+		Ate -> subject_and_0
+		Person -> subject_and_0
+		subject_and_0 -> subject
+	subject_and_1 [label=AND]
+		Sick -> subject_and_1
+		Person -> subject_and_1
+		subject_and_1 -> subject
+}

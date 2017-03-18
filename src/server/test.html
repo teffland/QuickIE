@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}"> -->
+    <link rel=stylesheet type=text/css href="viz.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
+    <script type="text/javascript" src="./tokenize.js"></script>
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/graphs.js') }}"></script> -->
+</head>
+<body>
+  <div class="doc"></div>
+</body>
+<script type="text/javascript">
+// var tokenize = require('tokenize-text')();
+// var tokenizeEnglish = require('tokenize-english')(tokenize);
+var Document = function(config) {
+  this.text = config.text || null;
+  this.annotations = config.annotations || {};
+  this.linewidth = config.linewidth || 80;
+  this.tokens = config.tokens || tokenize(this.text);
+  this.token2charidx = config.token2charidx || {};
+  this.char2tokenidx = config.char2tokenidx || {};
+  this.calcTokenCharMaps();
+};
+
+// Map token indices to character indices in freetext and vice versa.
+Document.prototype.calcTokenCharMaps = function() {
+  var char_cap = this.tokens[0].length,
+      token_idx = 0;
+  for (var char_idx=0; char_idx < this.text.length; char_idx++) {
+    // we've moved on to the next token
+    if (char_idx >= char_cap
+        && token_idx < this.tokens.length-1
+        && this.text[char_idx] == this.tokens[token_idx+1][0]) {
+      token_idx += 1
+      char_cap += this.tokens[token_idx].length
+    }
+    this.token2charidx[token_idx] = char_idx;
+    this.char2tokenidx[char_idx] = token_idx;
+  }
+};
+
+var Line = function() {
+  
+}
+
+Document.prototype.assignLines = function() {
+  var line = new Line()
+}
+Document.prototype.render = function() {
+
+}
+//
+// var Annotation = (function() {
+//   var Annotation = function(config) {
+//     this.spans = config.spans || [];
+//     this.text = config.text || '';
+//     this.type  =
+//
+//   }
+// }());
+var doc = "this is a test document that is connected to this relation";
+var d = new Document({'text':doc});
+
+</script>
+</html>

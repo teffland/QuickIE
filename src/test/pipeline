@@ -1,0 +1,57 @@
+// Microtask Pipeline
+digraph {
+	Ate [label=Ate color=plum style=filled]
+		Person -> Ate
+	multiple [label=multiple color=plum style=filled]
+		Person -> multiple
+	Restaurant [label=Restaurant color=plum style=filled]
+	Food [label=Food color=plum style=filled]
+		Ate -> Food
+	type [label=type color=plum style=filled]
+		Time -> type
+	object [label=object color=cadetblue style=filled]
+		Ate -> object
+		Food -> object
+	when [label=when color=cadetblue style=filled]
+		Ate -> when
+		Time -> when
+	Person [label=Person color=plum style=filled]
+	tense [label=tense color=plum style=filled]
+		Sick -> tense
+	Location [label=Location color=plum style=filled]
+	Sick [label=Sick color=plum style=filled]
+		Person -> Sick
+	Time [label=Time color=plum style=filled]
+	at [label=at color=cadetblue style=filled]
+		Restaurant -> at
+		Location -> at
+	from [label=from color=cadetblue style=filled]
+		Sick -> from
+		Ate -> from
+	realis [label=realis color=plum style=filled]
+		Sick -> realis
+	where [label=where color=cadetblue style=filled]
+		Ate -> where
+		Restaurant -> where
+		Ate -> where
+		Location -> where
+	exhibited [label=exhibited color=cadetblue style=filled]
+		Person -> exhibited
+		Symptom -> exhibited
+	Symptom [label=Symptom color=plum style=filled]
+	subject [label=subject color=cadetblue style=filled]
+		Ate -> subject
+		Person -> subject
+		Sick -> subject
+		Person -> subject
+	subgraph legend {
+	label="Legend"
+	color=grey
+	style=filled
+		e1 [label="ENTITY 1" color=plum style=filled]
+		e2 [label="ENTITY 2" color=plum style=filled]
+		r1 [label=RELATION color=cadetblue style=filled]
+			e1 -> r1
+			e2 -> r1
+	}
+}

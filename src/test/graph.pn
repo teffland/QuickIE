@@ -1,0 +1,22 @@
+// Microtask Pipeline
+digraph {
+	Ate [label=Ate]
+	multiple [label=multiple]
+	Restaurant [label=Restaurant]
+	Food [label=Food]
+	type [label=type]
+	object [label=object]
+	when [label=when]
+	Person [label=Person]
+	tense [label=tense]
+	Location [label=Location]
+	Sick [label=Sick]
+	Time [label=Time]
+	at [label=at]
+	from [label=from]
+	realis [label=realis]
+	where [label=where]
+	exhibited [label=exhibited]
+	Symptom [label=Symptom]
+	subject [label=subject]
+}

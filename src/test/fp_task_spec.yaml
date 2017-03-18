@@ -1,0 +1,59 @@
+# Template:
+#   Requires:
+#     - Parent Object 1
+      # - [Parent Object 1, AND Parent Object 2]
+#   Explanation: Yes | No | Optional
+#   Interactions:
+#     relation: Other Template
+#   Properties:
+#     - property: [value opt 1 | value opt 2
+    # Values:
+    #   - Value opt 1
+    #   - Value opt 2
+
+
+Person:
+  Explanation: Yes
+  Interactions:
+    exhibited: Symptom
+  Properties:
+    multiple: [true, false]
+
+Sick:
+  Explanation: Yes
+  Requires:
+    - Person
+  Interactions:
+    subject: Person
+    from: Ate
+  Properties:
+    tense: [past, present, future]
+    realis: [real, hypothetical]
+
+Ate:
+  Explanation: Yes
+  Requires:
+    - Person
+  Interactions:
+    subject: Person
+    object: Food
+    when: Time
+    where: [Restaurant, Location]
+
+Food:
+  Explanation: Yes
+  Requires:
+    - Ate
+
+Time:
+  Explanation: Yes
+  Properties:
+    type: [relative, absolute]
+
+Restaurant:
+  Explanation: Yes
+  Interactions:
+    at: Location
+
+Location:
+  Explanation: Yes
