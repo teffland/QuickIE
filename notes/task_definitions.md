@@ -48,9 +48,7 @@ This is not surprising. Just as people do, we can compose factual assertions abo
 and how they interact with/operate on eachother to answer virtually infinitely varying questions of increasing complexity.
 (As people, we then "chunk" the answers to subqueries so that we can answer even higher level questions later on with less mental effort. We memoize...)
 
-Putting it as annoyingly simply as possible: Language is compositional.
-
-So why this rant?
+Putting it as annoyingly simply as possible: language and knowledge are compositional.
 
 This means IE tasks at the end of the day are logical composition of entities and their interactions. 
 Here, for the purpose of defining IE tasks, it becomes very useful to blend all of the semantic distinctions of the first list.
